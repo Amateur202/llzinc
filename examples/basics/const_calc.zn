@@ -1,0 +1,7 @@
+const int x = 10
+const int y = 20
+const int z = x + y
+
+void main() {
+    println(z)
+}

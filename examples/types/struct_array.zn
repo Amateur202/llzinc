@@ -1,0 +1,17 @@
+struct Person{
+    string name
+}
+
+void main(){
+
+    Person[] people = []
+
+    people.push(
+        Person{
+            name: "Alice"
+        }
+    )
+
+    println(people[0].name)
+
+}

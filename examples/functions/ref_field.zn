@@ -1,0 +1,14 @@
+struct Counter{
+    int val
+}
+
+void add(ref int x){
+    x = x + 5
+}
+
+void main(){
+    Counter c
+    c.val = 10
+    add(c.val)
+    println(c.val)
+}

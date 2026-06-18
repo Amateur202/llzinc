@@ -1,0 +1,13 @@
+void main(){
+
+    file f = open("test.txt", "r")
+
+    for (not f.is_eof()){
+
+        println(f.readln())
+
+    }
+
+    f.close()
+
+}

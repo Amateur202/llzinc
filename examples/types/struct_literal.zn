@@ -1,0 +1,15 @@
+struct Person{
+    string name
+    int age
+}
+
+void main(){
+
+    Person p = Person{
+        name: "Alice",
+        age: 20
+    }
+
+    println(p.name)
+
+}

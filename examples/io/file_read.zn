@@ -1,0 +1,9 @@
+void main(){
+
+    file f = open("test.txt", "r")
+
+    println(f.read())
+
+    f.close()
+
+}

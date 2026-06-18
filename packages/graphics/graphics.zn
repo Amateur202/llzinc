@@ -1,0 +1,169 @@
+extern {
+    bool _zn_gfx_window(int w, int h, string title)
+    void _zn_gfx_close()
+    bool _zn_gfx_running()
+    void _zn_gfx_clear(int r, int g, int b, int a)
+    void _zn_gfx_update()
+    void _zn_gfx_title(string title)
+    int _zn_gfx_fps()
+    void _zn_gfx_set_fps(int fps)
+    float _zn_gfx_delta()
+    void _zn_gfx_pixel(int x, int y, int r, int g, int b, int a)
+    void _zn_gfx_line(int x1, int y1, int x2, int y2, int r, int g, int b, int a)
+    void _zn_gfx_rect(int x, int y, int w, int h, int r, int g, int b, int a)
+    void _zn_gfx_rect_outline(int x, int y, int w, int h, int r, int g, int b, int a, int thick)
+    void _zn_gfx_circle(int cx, int cy, int rad, int r, int g, int b, int a)
+    void _zn_gfx_circle_outline(int cx, int cy, int rad, int r, int g, int b, int a)
+    void _zn_gfx_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b, int a)
+    void _zn_gfx_text(string text, int x, int y, int size, int r, int g, int b, int a)
+    bool _zn_gfx_key_down(int key)
+    bool _zn_gfx_key_pressed(int key)
+    bool _zn_gfx_key_released(int key)
+    int _zn_gfx_mouse_x()
+    int _zn_gfx_mouse_y()
+    bool _zn_gfx_mouse_clicked(int btn)
+    int _zn_gfx_mouse_scroll()
+}
+
+const KEY_SPACE = 32
+const KEY_ESC = 256
+const KEY_ENTER = 257
+const KEY_UP = 265
+const KEY_DOWN = 264
+const KEY_LEFT = 263
+const KEY_RIGHT = 262
+const KEY_A = 65
+const KEY_B = 66
+const KEY_C = 67
+const KEY_D = 68
+const KEY_E = 69
+const KEY_F = 70
+const KEY_G = 71
+const KEY_H = 72
+const KEY_I = 73
+const KEY_J = 74
+const KEY_K = 75
+const KEY_L = 76
+const KEY_M = 77
+const KEY_N = 78
+const KEY_O = 79
+const KEY_P = 80
+const KEY_Q = 81
+const KEY_R = 82
+const KEY_S = 83
+const KEY_T = 84
+const KEY_U = 85
+const KEY_V = 86
+const KEY_W = 87
+const KEY_X = 88
+const KEY_Y = 89
+const KEY_Z = 90
+const KEY_0 = 48
+const KEY_1 = 49
+const KEY_2 = 50
+const KEY_3 = 51
+const KEY_4 = 52
+const KEY_5 = 53
+const KEY_6 = 54
+const KEY_7 = 55
+const KEY_8 = 56
+const KEY_9 = 57
+const MOUSE_LEFT = 0
+const MOUSE_RIGHT = 1
+
+bool window(int[] size, string title) {
+    _zn_gfx_window(size[0], size[1], title)
+    return true
+}
+
+void close() {
+    _zn_gfx_close()
+}
+
+bool running() {
+    return _zn_gfx_running()
+}
+
+void clear(int[] color) {
+    _zn_gfx_clear(color[0], color[1], color[2], color[3])
+}
+
+void update() {
+    _zn_gfx_update()
+}
+
+void title(string t) {
+    _zn_gfx_title(t)
+}
+
+int fps() {
+    return _zn_gfx_fps()
+}
+
+void set_fps(int fps) {
+    _zn_gfx_set_fps(fps)
+}
+
+float delta() {
+    return _zn_gfx_delta()
+}
+
+void pixel(int[] pos, int[] color) {
+    _zn_gfx_pixel(pos[0], pos[1], color[0], color[1], color[2], color[3])
+}
+
+void line(int[] p1, int[] p2, int[] color) {
+    _zn_gfx_line(p1[0], p1[1], p2[0], p2[1], color[0], color[1], color[2], color[3])
+}
+
+void rect(int[] pos, int[] size, int[] color) {
+    _zn_gfx_rect(pos[0], pos[1], size[0], size[1], color[0], color[1], color[2], color[3])
+}
+
+void rect_outline(int[] pos, int[] size, int[] color, int thick) {
+    _zn_gfx_rect_outline(pos[0], pos[1], size[0], size[1], color[0], color[1], color[2], color[3], thick)
+}
+
+void circle(int[] pos, int rad, int[] color) {
+    _zn_gfx_circle(pos[0], pos[1], rad, color[0], color[1], color[2], color[3])
+}
+
+void circle_outline(int[] pos, int rad, int[] color) {
+    _zn_gfx_circle_outline(pos[0], pos[1], rad, color[0], color[1], color[2], color[3])
+}
+
+void triangle(int[] p1, int[] p2, int[] p3, int[] color) {
+    _zn_gfx_triangle(p1[0], p1[1], p2[0], p2[1], p3[0], p3[1], color[0], color[1], color[2], color[3])
+}
+
+void text(string text, int[] pos, int size, int[] color) {
+    _zn_gfx_text(text, pos[0], pos[1], size, color[0], color[1], color[2], color[3])
+}
+
+bool key_down(int key) {
+    return _zn_gfx_key_down(key)
+}
+
+bool key_pressed(int key) {
+    return _zn_gfx_key_pressed(key)
+}
+
+bool key_released(int key) {
+    return _zn_gfx_key_released(key)
+}
+
+int mouse_x() {
+    return _zn_gfx_mouse_x()
+}
+
+int mouse_y() {
+    return _zn_gfx_mouse_y()
+}
+
+bool mouse_clicked(int btn) {
+    return _zn_gfx_mouse_clicked(btn)
+}
+
+int mouse_scroll() {
+    return _zn_gfx_mouse_scroll()
+}

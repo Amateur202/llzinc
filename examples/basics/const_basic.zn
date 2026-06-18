@@ -1,0 +1,9 @@
+const int x = 42
+const string name = "zinc"
+const float pi = 3.14
+
+void main() {
+    println(x)
+    println(name)
+    println(pi)
+}

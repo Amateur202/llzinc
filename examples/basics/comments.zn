@@ -1,0 +1,10 @@
+// This is a single line comment
+void main(){
+    // Print message
+    println("Hello")
+    /*
+    Multi-line
+    comment
+    */
+    println("World")
+}

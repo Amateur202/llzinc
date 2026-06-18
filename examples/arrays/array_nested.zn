@@ -1,0 +1,8 @@
+void main(){
+    int[][] matrix = [
+        [1, 2],
+        [3, 4]
+    ]
+    println(matrix[0][1])
+    println(matrix[1][0])
+}

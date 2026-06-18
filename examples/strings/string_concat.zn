@@ -1,0 +1,12 @@
+void main(){
+    string a = "hello "
+    string b = "world"
+    string c = a + b
+    println(c)
+
+    string d = "zip"
+    string e = d + "pyp"
+    println(e)
+
+    println("hello" + " zinc")
+}

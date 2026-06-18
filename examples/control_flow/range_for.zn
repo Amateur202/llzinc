@@ -1,0 +1,42 @@
+void main() {
+
+    // range() in for loops
+    println("range(5):")
+    for (i in range(5)) {
+        println(i)
+    }
+
+    println("range(2, 6):")
+    for (i in range(2, 6)) {
+        println(i)
+    }
+
+    println("range(0, 10, 3):")
+    for (i in range(0, 10, 3)) {
+        println(i)
+    }
+
+    // range() as array initializer
+    int[] nums = range(1, 6)
+    println("array from range(1, 6):")
+    for (n in nums) {
+        println(n)
+    }
+
+    // range() with step for array
+    int[] evens = range(0, 11, 2)
+    println("evens:")
+    for (e in evens) {
+        println(e)
+    }
+
+    // len() on range array
+    println("len of range(10, 20) = " + convert("string", len(range(10, 20))))
+
+    // nested range
+    for (row in range(3)) {
+        for (col in range(3)) {
+            println("(" + convert("string", row) + ", " + convert("string", col) + ")")
+        }
+    }
+}

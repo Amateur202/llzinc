@@ -1,0 +1,17 @@
+void main(){
+
+    int x = 0
+
+    for () {
+
+        println(x)
+
+        x = x + 1
+
+        if(x >= 3){
+            break
+        }
+
+    }
+
+}

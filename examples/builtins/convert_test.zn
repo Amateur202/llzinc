@@ -1,0 +1,11 @@
+void main(){
+
+    int x = convert("int", "123")
+
+    println(x)
+
+    char c = convert("char", "A")
+
+    println(c)
+
+}

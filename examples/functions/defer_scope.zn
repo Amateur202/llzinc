@@ -1,0 +1,13 @@
+void main(){
+
+    println("A")
+
+    {
+        defer println("B")
+
+        println("C")
+    }
+
+    println("D")
+
+}

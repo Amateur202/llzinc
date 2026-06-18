@@ -1,0 +1,21 @@
+struct Address{
+    string city
+}
+
+struct Person{
+    string name
+    Address addr
+}
+
+void main(){
+
+    Person p = Person{
+        name: "John",
+        addr: Address{
+            city: "Chennai"
+        }
+    }
+
+    println(p.addr.city)
+
+}

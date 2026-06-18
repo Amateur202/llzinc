@@ -1,0 +1,109 @@
+import "graphics"
+
+void main() {
+    int[] SIZE = [800, 600]
+    graphics.window(SIZE, "Pong")
+    graphics.set_fps(60)
+
+    left_y = 250.0
+    right_y = 250.0
+    paddle_speed = 300.0
+
+    ball_x = 400.0
+    ball_y = 300.0
+    ball_sx = 200.0
+    ball_sy = 150.0
+
+    lscore = 0
+    rscore = 0
+
+    bg = [20, 20, 30, 255]
+    midline = [100, 100, 100, 255]
+    white = [255, 255, 255, 255]
+    score_color = [200, 200, 200, 255]
+
+    for graphics.running() {
+        dt = graphics.delta()
+
+        if graphics.key_down(graphics.KEY_W) {
+            left_y = left_y - paddle_speed * dt
+        }
+        if graphics.key_down(graphics.KEY_S) {
+            left_y = left_y + paddle_speed * dt
+        }
+        if graphics.key_down(graphics.KEY_UP) {
+            right_y = right_y - paddle_speed * dt
+        }
+        if graphics.key_down(graphics.KEY_DOWN) {
+            right_y = right_y + paddle_speed * dt
+        }
+
+        if left_y < 0.0 { left_y = 0.0 }
+        if left_y > 500.0 { left_y = 500.0 }
+        if right_y < 0.0 { right_y = 0.0 }
+        if right_y > 500.0 { right_y = 500.0 }
+
+        ball_x = ball_x + ball_sx * dt
+        ball_y = ball_y + ball_sy * dt
+
+        if ball_y < 0.0 {
+            ball_y = 0.0
+            ball_sy = ball_sy * -1.0
+        }
+        if ball_y > 592.0 {
+            ball_y = 592.0
+            ball_sy = ball_sy * -1.0
+        }
+
+        if ball_x < 18.0 and ball_y > left_y and ball_y < left_y + 100.0 {
+            ball_x = 18.0
+            ball_sx = ball_sx * -1.0
+        }
+        if ball_x > 782.0 and ball_y > right_y and ball_y < right_y + 100.0 {
+            ball_x = 782.0
+            ball_sx = ball_sx * -1.0
+        }
+
+        if (ball_x < -10.0) {
+            rscore = rscore + 1
+            ball_x = 400.0
+            ball_y = 300.0
+            ball_sx = 200.0
+            ball_sy = 150.0
+        }
+        if ball_x > 810.0 {
+            lscore = lscore + 1
+            ball_x = 400.0
+            ball_y = 300.0
+            ball_sx = -200.0
+            ball_sy = 150.0
+        }
+
+        graphics.clear(bg)
+
+        graphics.rect([398, 0], [4, 600], midline)
+
+        ly = convert("int", left_y)
+        ry = convert("int", right_y)
+        bx = convert("int", ball_x)
+        by = convert("int", ball_y)
+
+        graphics.rect([0, ly], [10, 100], white)
+        graphics.rect([790, ry], [10, 100], white)
+
+        graphics.circle([bx, by], 8, white)
+
+        ls = convert("string", lscore)
+        rs = convert("string", rscore)
+        graphics.text(ls, [50, 20], 20, score_color)
+        graphics.text(rs, [740, 20], 20, score_color)
+
+        graphics.update()
+
+        if graphics.key_pressed(graphics.KEY_ESC) {
+            break
+        }
+    }
+
+    graphics.close()
+}

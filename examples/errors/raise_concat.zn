@@ -1,0 +1,5 @@
+void main(){
+    string msg = "error"
+    string detail = ": invalid operation"
+    raise msg + detail
+}

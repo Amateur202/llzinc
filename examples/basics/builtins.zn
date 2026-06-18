@@ -1,0 +1,10 @@
+void main(){
+    int x = 10
+    println(sizeof(x))
+    println(sizeof(int))
+
+    println(typeof(x))
+    println(typeof("hello"))
+    println(typeof(42))
+    println(typeof(1.5))
+}

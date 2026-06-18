@@ -1,0 +1,15 @@
+void main() {
+    map<string, int> scores = {}
+    scores["alice"] = 10
+    scores["bob"] = 25
+
+    if ("alice" in scores) {
+        println("Success: Alice found")
+    }
+
+    del scores["alice"]
+
+    if (not ("alice" in scores)) {
+        println("Success: Alice deleted")
+    }
+}

@@ -1,0 +1,6 @@
+deps/
+*.ll
+*.bc
+*.o
+*.pyc
+__pycache__/

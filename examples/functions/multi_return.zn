@@ -1,0 +1,15 @@
+int, string get_user(){
+    return 42, "Alice"
+}
+
+void main(){
+    int a, string b = get_user()
+    println(a)
+    println(b)
+    int x, string y = get_user()
+    println(x)
+    println(y)
+    a, b = get_user()
+    println(a)
+    println(b)
+}

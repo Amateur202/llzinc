@@ -1,0 +1,73 @@
+struct Point {
+    int x
+    int y
+}
+
+void main() {
+    // sizeof on type names
+    println("sizeof(int) = " + convert("string", sizeof(int)))
+    println("sizeof(uint64) = " + convert("string", sizeof(uint64)))
+    println("sizeof(float) = " + convert("string", sizeof(float)))
+    println("sizeof(float32) = " + convert("string", sizeof(float32)))
+    println("sizeof(float64) = " + convert("string", sizeof(float64)))
+    println("sizeof(char) = " + convert("string", sizeof(char)))
+    println("sizeof(bool) = " + convert("string", sizeof(bool)))
+    println("sizeof(string) = " + convert("string", sizeof(string)))
+    println("sizeof(file) = " + convert("string", sizeof(file)))
+
+    // typeof on literals
+    println("typeof(42) = " + typeof(42))
+    println("typeof(3.14) = " + typeof(3.14))
+    println("typeof(2.5f) = " + typeof(2.5f))
+    println("typeof(true) = " + typeof(true))
+    println("typeof(false) = " + typeof(false))
+    println("typeof('a') = " + typeof('a'))
+    println("typeof(\"hi\") = " + typeof("hi"))
+    println("typeof(\"\") = " + typeof(""))
+
+    // typeof + sizeof on variables of each type
+    int a = 42
+    println("typeof(a) = " + typeof(a) + ", sizeof(a) = " + convert("string", sizeof(a)))
+
+    uint64 b = 100
+    println("typeof(b) = " + typeof(b) + ", sizeof(b) = " + convert("string", sizeof(b)))
+
+    float c = 3.14
+    println("typeof(c) = " + typeof(c) + ", sizeof(c) = " + convert("string", sizeof(c)))
+
+    float32 d = 2.5f
+    println("typeof(d) = " + typeof(d) + ", sizeof(d) = " + convert("string", sizeof(d)))
+
+    float64 e = 1.5
+    println("typeof(e) = " + typeof(e) + ", sizeof(e) = " + convert("string", sizeof(e)))
+
+    string s = "hello"
+    println("typeof(s) = " + typeof(s) + ", sizeof(s) = " + convert("string", sizeof(s)))
+
+    char ch = 'z'
+    println("typeof(ch) = " + typeof(ch) + ", sizeof(ch) = " + convert("string", sizeof(ch)))
+
+    bool flag = (a == 42)
+    println("typeof(flag) = " + typeof(flag) + ", sizeof(flag) = " + convert("string", sizeof(flag)))
+
+    // struct variable
+    Point p = Point{x: 10, y: 20}
+    println("typeof(p) = " + typeof(p) + ", sizeof(p) = " + convert("string", sizeof(p)))
+
+    // array variables (test numeric type compatibility)
+    int[] arr = [1, 2, 3, 4, 5]
+    println("typeof(arr) = " + typeof(arr) + ", sizeof(arr) = " + convert("string", sizeof(arr)))
+
+    float64[] farray = [1.5, 2.5]
+    println("typeof(farray) = " + typeof(farray) + ", sizeof(farray) = " + convert("string", sizeof(farray)))
+
+    // map variables
+    map<string, int> m = {}
+    m["a"] = 1
+    m["b"] = 2
+    println("typeof(m) = " + typeof(m) + ", sizeof(m) = " + convert("string", sizeof(m)))
+
+    map<string, string> ms = {}
+    ms["k"] = "v"
+    println("typeof(ms) = " + typeof(ms) + ", sizeof(ms) = " + convert("string", sizeof(ms)))
+}

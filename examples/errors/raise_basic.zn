@@ -1,0 +1,5 @@
+void main(){
+    println("About to raise an error...")
+    raise "something went wrong"
+    println("this will never print")
+}

@@ -1,0 +1,24 @@
+void main(){
+    if (2 in [1, 2, 3]){
+        println("found 2")
+    }
+    if (5 in [1, 2, 3]){
+        println("found 5")
+    } else {
+        println("5 not found")
+    }
+    if ('e' in "hello"){
+        println("found e")
+    }
+    if ('z' in "hello"){
+        println("found z")
+    } else {
+        println("z not found")
+    }
+    if ("or" in "world"){
+        println("found or")
+    }
+    if (not (5 in [1,2,3])){
+        println("5 not in list")
+    }
+}

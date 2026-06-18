@@ -1,0 +1,21 @@
+struct Player{
+
+    int hp
+
+    void damage(int amount){
+        hp = hp - amount
+    }
+
+}
+
+void main(){
+
+    Player p = Player{
+        hp: 100
+    }
+
+    p.damage(20)
+
+    println(p.hp)
+
+}

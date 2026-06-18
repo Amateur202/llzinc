@@ -1,0 +1,11 @@
+void main(){
+
+    int[] nums = [1,2,3]
+
+    for (n in nums) {
+
+        println(n)
+
+    }
+
+}

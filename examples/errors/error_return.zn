@@ -1,0 +1,22 @@
+int, string divide(int a, int b){
+    if (b == 0){
+        return 0, "division by zero"
+    }
+    return a / b, ""
+}
+
+void main(){
+    int result, string err = divide(10, 0)
+    if (err != ""){
+        println("error: " + err)
+    } else {
+        println(result)
+    }
+
+    result, err = divide(10, 3)
+    if (err != ""){
+        println("error: " + err)
+    } else {
+        println(result)
+    }
+}

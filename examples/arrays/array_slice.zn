@@ -1,0 +1,43 @@
+void main() {
+    int[] arr = [0, 10, 20, 30, 40, 50]
+
+    // slice with start and end
+    int[] mid = arr[1:4]
+    println("mid[0] = " + convert("string", mid[0]))
+    println("mid[1] = " + convert("string", mid[1]))
+    println("mid[2] = " + convert("string", mid[2]))
+
+    // slice with only start
+    int[] from2 = arr[2:]
+    println("from2[0] = " + convert("string", from2[0]))
+    println("len(from2) = " + convert("string", len(from2)))
+
+    // slice with only end
+    int[] first3 = arr[:3]
+    println("first3[0] = " + convert("string", first3[0]))
+    println("len(first3) = " + convert("string", len(first3)))
+
+    // full slice
+    int[] all = arr[:]
+    println("len(all) = " + convert("string", len(all)))
+    println("all[0] = " + convert("string", all[0]))
+    println("all[5] = " + convert("string", all[5]))
+
+    // variable indices
+    int s = 2
+    int e = 5
+    int[] var_slice = arr[s:e]
+    println("var_slice[0] = " + convert("string", var_slice[0]))
+    println("len(var_slice) = " + convert("string", len(var_slice)))
+
+    // string slicing
+    string msg = "Hello Zinc"
+    string sub = msg[0:5]
+    println("sub = " + sub)
+
+    string from = msg[6:]
+    println("from = " + from)
+
+    string to = msg[:5]
+    println("to = " + to)
+}

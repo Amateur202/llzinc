@@ -1,0 +1,17 @@
+void main(){
+    println("c-style for:")
+    for(int i = 0; i < 5; i = i + 1){
+        println(i)
+    }
+
+    println("break and continue:")
+    for(int i = 0; i < 100; i = i + 1){
+        if(i == 5){
+            continue
+        }
+        if(i == 10){
+            break
+        }
+        println(i)
+    }
+}

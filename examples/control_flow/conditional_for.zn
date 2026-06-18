@@ -1,0 +1,13 @@
+void main(){
+
+    int x = 0
+
+    for (x < 5) {
+
+        println(x)
+
+        x = x + 1
+
+    }
+
+}

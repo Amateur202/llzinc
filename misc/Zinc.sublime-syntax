@@ -1,0 +1,132 @@
+%YAML 1.2
+---
+# Zinc Language syntax for Sublime Text
+# Install: copy to ~/.config/sublime-text/Packages/User/Zinc.sublime-syntax
+name: Zinc
+file_extensions:
+  - zn
+scope: source.zinc
+
+contexts:
+  main:
+    - include: comments
+    - include: constants
+    - include: numbers
+    - include: strings
+    - include: chars
+    - include: keywords
+    - include: types
+    - include: builtins
+    - include: function_definition
+    - include: dot_access
+    - include: identifiers
+
+  comments:
+    - match: '//'
+      scope: punctuation.definition.comment.zinc
+      push: line_comment
+    - match: '/\*'
+      scope: punctuation.definition.comment.zinc
+      push: block_comment
+
+  line_comment:
+    - meta_scope: comment.line.double-slash.zinc
+    - match: $
+      pop: true
+
+  block_comment:
+    - meta_scope: comment.block.zinc
+    - match: '\*/'
+      pop: true
+
+  constants:
+    - match: '\b(true|false)\b'
+      scope: constant.language.zinc
+    - match: '\b_\b'
+      scope: variable.language.discard.zinc
+
+  numbers:
+    - match: '\b\d+\.\d+f\b'
+      scope: constant.numeric.float.zinc
+    - match: '\b\d+\.\d+\b'
+      scope: constant.numeric.float.zinc
+    - match: '\b\d+\b'
+      scope: constant.numeric.integer.zinc
+
+  strings:
+    - match: '"'
+      scope: punctuation.definition.string.begin.zinc
+      push: string_body
+
+  string_body:
+    - meta_scope: string.quoted.double.zinc
+    - match: '\\.'
+      scope: constant.character.escape.zinc
+    - match: '"'
+      scope: punctuation.definition.string.end.zinc
+      pop: true
+
+  chars:
+    - match: "'"
+      scope: punctuation.definition.char.begin.zinc
+      push: char_body
+
+  char_body:
+    - meta_scope: string.quoted.single.zinc
+    - match: '\\.'
+      scope: constant.character.escape.zinc
+    - match: "'"
+      scope: punctuation.definition.char.end.zinc
+      pop: true
+
+  keywords:
+    - match: >-
+        \b(if|else|elif|for|return|match|break|continue|defer|struct|enum|
+        import|const|extern|as|ref|del|not|and|or|in|sizeof|typeof|void)\b
+      scope: keyword.control.zinc
+
+  types:
+    - match: >-
+        \b(int|uint64|float|float32|float64|string|char|bool|file)\b
+      scope: storage.type.zinc
+
+  builtins:
+    - match: >-
+        \b(println|print|input|sleep|len|convert|open|exists)\b
+      scope: support.function.builtin.zinc
+
+  function_definition:
+    - match: >-
+        \b(void|int|uint64|float|float32|float64|string|char|bool|file|
+        [A-Z][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(
+      captures:
+        1: storage.type.zinc
+        2: entity.name.function.zinc
+      push: function_params
+
+  function_params:
+    - match: '\)'
+      pop: true
+    - include: main
+
+  dot_access:
+    - match: >-
+        ([a-zA-Z_][a-zA-Z0-9_]*)\.([a-zA-Z_][a-zA-Z0-9_]*)\s*\(
+      captures:
+        1: variable.other.module.zinc
+        2: entity.name.function.zinc
+    - match: >-
+        ([a-zA-Z_][a-zA-Z0-9_]*)\.([A-Z_][A-Z0-9_]*)\b
+      captures:
+        1: variable.other.module.zinc
+        2: constant.other.enum.zinc
+
+  identifiers:
+    - match: >-
+        \b([A-Z][a-zA-Z0-9_]*)\b
+      scope: entity.name.type.zinc
+    - match: >-
+        \b_[a-zA-Z_][a-zA-Z0-9_]*\b
+      scope: variable.other.private.zinc
+    - match: '[a-zA-Z_][a-zA-Z0-9_]*'
+      scope: variable.other.zinc

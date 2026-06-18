@@ -1,0 +1,35 @@
+void main(){
+    int x = 7
+
+    if(x > 5){
+        println("big")
+    }
+    else{
+        println("small")
+    }
+
+    if(x > 5 and x < 10){
+        println("ok")
+    }
+
+    if(x == 5){
+        println("five")
+    }
+    elif(x == 6){
+        println("six")
+    }
+    elif(x == 7){
+        println("seven")
+    }
+    else{
+        println("other")
+    }
+
+    bool enabled = true
+    if(not enabled){
+        println("disabled")
+    }
+    else{
+        println("enabled")
+    }
+}

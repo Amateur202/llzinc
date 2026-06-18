@@ -1,0 +1,32 @@
+struct Person{
+    string name
+    int age
+}
+
+Person make_person(string name, int age){
+    return Person{
+        name: name,
+        age: age
+    }
+}
+
+void greet(Person p){
+    println(p.name)
+}
+
+void main(){
+    Person p1 = Person{
+        name: "Bob"
+    }
+    println(p1.age)
+
+    Person p2 = Person{}
+    println(p2.name)
+    println(p2.age)
+
+    Person p3 = make_person("Charlie", 25)
+    println(p3.name)
+    println(p3.age)
+
+    greet(p3)
+}

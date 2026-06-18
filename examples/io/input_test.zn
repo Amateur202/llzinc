@@ -1,0 +1,7 @@
+void main(){
+
+    string name = input("Enter name: ")
+
+    println(name)
+
+}

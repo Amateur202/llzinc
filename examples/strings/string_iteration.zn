@@ -1,0 +1,11 @@
+void main(){
+
+    string name = "zinc"
+
+    for (c in name) {
+
+        println(c)
+
+    }
+
+}

@@ -1,0 +1,79 @@
+extern {
+    float _zn_sin(float x)
+    float _zn_cos(float x)
+    float _zn_tan(float x)
+    float _zn_asin(float x)
+    float _zn_acos(float x)
+    float _zn_atan(float x)
+    float _zn_atan2(float y, float x)
+    float _zn_sinh(float x)
+    float _zn_cosh(float x)
+    float _zn_tanh(float x)
+    float _zn_asinh(float x)
+    float _zn_acosh(float x)
+    float _zn_atanh(float x)
+    float _zn_exp(float x)
+    float _zn_exp2(float x)
+    float _zn_exp10(float x)
+    float _zn_log(float x)
+    float _zn_log2(float x)
+    float _zn_log10(float x)
+    float _zn_log1p(float x)
+    float _zn_pow(float x, float y)
+    float _zn_sqrt(float x)
+    float _zn_cbrt(float x)
+    float _zn_hypot(float x, float y)
+    float _zn_floor(float x)
+    float _zn_ceil(float x)
+    float _zn_round(float x)
+    float _zn_trunc(float x)
+    float _zn_rint(float x)
+    float _zn_nearbyint(float x)
+    float _zn_fabs(float x)
+    float _zn_fmod(float x, float y)
+    float _zn_remainder(float x, float y)
+    float _zn_fdim(float x, float y)
+    float _zn_fmax(float x, float y)
+    float _zn_fmin(float x, float y)
+    float _zn_fma(float x, float y, float z)
+    float _zn_copysign(float x, float y)
+}
+
+float sin(float x) { return _zn_sin(x) }
+float cos(float x) { return _zn_cos(x) }
+float tan(float x) { return _zn_tan(x) }
+float asin(float x) { return _zn_asin(x) }
+float acos(float x) { return _zn_acos(x) }
+float atan(float x) { return _zn_atan(x) }
+float atan2(float y, float x) { return _zn_atan2(y, x) }
+float sinh(float x) { return _zn_sinh(x) }
+float cosh(float x) { return _zn_cosh(x) }
+float tanh(float x) { return _zn_tanh(x) }
+float asinh(float x) { return _zn_asinh(x) }
+float acosh(float x) { return _zn_acosh(x) }
+float atanh(float x) { return _zn_atanh(x) }
+float exp(float x) { return _zn_exp(x) }
+float exp2(float x) { return _zn_exp2(x) }
+float exp10(float x) { return _zn_exp10(x) }
+float log(float x) { return _zn_log(x) }
+float log2(float x) { return _zn_log2(x) }
+float log10(float x) { return _zn_log10(x) }
+float log1p(float x) { return _zn_log1p(x) }
+float pow(float x, float y) { return _zn_pow(x, y) }
+float sqrt(float x) { return _zn_sqrt(x) }
+float cbrt(float x) { return _zn_cbrt(x) }
+float hypot(float x, float y) { return _zn_hypot(x, y) }
+float floor(float x) { return _zn_floor(x) }
+float ceil(float x) { return _zn_ceil(x) }
+float round(float x) { return _zn_round(x) }
+float trunc(float x) { return _zn_trunc(x) }
+float rint(float x) { return _zn_rint(x) }
+float nearbyint(float x) { return _zn_nearbyint(x) }
+float fabs(float x) { return _zn_fabs(x) }
+float fmod(float x, float y) { return _zn_fmod(x, y) }
+float remainder(float x, float y) { return _zn_remainder(x, y) }
+float fdim(float x, float y) { return _zn_fdim(x, y) }
+float fmax(float x, float y) { return _zn_fmax(x, y) }
+float fmin(float x, float y) { return _zn_fmin(x, y) }
+float fma(float x, float y, float z) { return _zn_fma(x, y, z) }
+float copysign(float x, float y) { return _zn_copysign(x, y) }

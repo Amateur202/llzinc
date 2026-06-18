@@ -1,0 +1,10 @@
+void main(){
+    char c = 'Z'
+    string s = "inc"
+    println(c)
+    println(s)
+    string t = c + s
+    println(t)
+    string u = s + c
+    println(u)
+}

@@ -1,0 +1,4 @@
+void main() {
+    println("project mode works")
+    println(add(10, 20))
+}

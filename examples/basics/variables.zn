@@ -1,0 +1,19 @@
+int x = 10
+uint64 y = 200000000000
+float z = 1.5
+float32 a = 2.5
+float64 b = 10.22
+string name = "Zinc"
+char c = 'A'
+bool enabled = true
+
+void main(){
+    println(x)
+    println(y)
+    println(z)
+    println(a)
+    println(b)
+    println(name)
+    println(c)
+    println(enabled)
+}

@@ -1,0 +1,30 @@
+struct Person{
+    string name
+    int age
+}
+
+Person, string make_person(){
+    Person p
+    p.name = "Bob"
+    p.age = 30
+    return p, "hello"
+}
+
+int, string, bool multi(){
+    return 1, "two", true
+}
+
+void main(){
+    Person p, string msg = make_person()
+    println(p.name)
+    println(p.age)
+    println(msg)
+    int a, string b, bool c = multi()
+    println(a)
+    println(b)
+    println(c)
+    a, b, c = multi()
+    println(a)
+    println(b)
+    println(c)
+}

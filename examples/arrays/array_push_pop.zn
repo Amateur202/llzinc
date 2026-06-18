@@ -1,0 +1,9 @@
+void main(){
+    int[] nums = [1, 2]
+    nums.push(3)
+    println(nums.length())
+    nums.pop()
+    println(nums.length())
+    println(nums[0])
+    println(nums[1])
+}

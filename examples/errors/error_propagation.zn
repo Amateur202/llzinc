@@ -1,0 +1,30 @@
+int, string parse_int(string s){
+    if (s == ""){
+        return 0, "empty string"
+    }
+    return int(s), ""
+}
+
+int, string double_value(string s){
+    int val, string err = parse_int(s)
+    if (err != ""){
+        return 0, err
+    }
+    return val * 2, ""
+}
+
+void main(){
+    int result, string err = double_value("21")
+    if (err != ""){
+        println("failed: " + err)
+        raise err
+    }
+    println(result)
+
+    result, err = double_value("")
+    if (err != ""){
+        println("failed: " + err)
+        raise err
+    }
+    println(result)
+}

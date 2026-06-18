@@ -1,0 +1,9 @@
+void check_nonzero(int x){
+    if (x == 0){
+        raise "zero not allowed"
+    }
+}
+
+void main(){
+    check_nonzero(0)
+}

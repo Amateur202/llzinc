@@ -1,0 +1,21 @@
+void main(){
+
+    int x = 1
+
+    match(x){
+
+        1 {
+
+            match(true){
+
+                true {
+                    println("nested works")
+                }
+
+            }
+
+        }
+
+    }
+
+}

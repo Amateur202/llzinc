@@ -1,0 +1,8 @@
+void main(){
+    string s = "a,b,c"
+    string[] parts = s.split(",")
+    println(parts.length())
+    println(parts[0])
+    println(parts[1])
+    println(parts[2])
+}

@@ -1,0 +1,22 @@
+enum Direction{
+    LEFT,
+    RIGHT
+}
+
+void main(){
+
+    Direction dir = Direction.RIGHT
+
+    match(dir){
+
+        Direction.LEFT {
+            println("left")
+        }
+
+        Direction.RIGHT {
+            println("right")
+        }
+
+    }
+
+}

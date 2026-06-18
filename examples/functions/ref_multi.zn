@@ -1,0 +1,20 @@
+struct Player{
+    int hp
+    int level
+}
+
+void update(ref Player p, int dmg, ref int counter){
+    p.hp = p.hp - dmg
+    counter = counter + 1
+}
+
+void main(){
+    Player p = Player{ hp: 100, level: 5 }
+    int c = 0
+    update(p, 10, c)
+    println(p.hp)
+    println(c)
+    update(p, 20, c)
+    println(p.hp)
+    println(c)
+}

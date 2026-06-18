@@ -1,0 +1,10 @@
+void main(){
+
+    file f = open("test.txt", "w")
+
+    f.write("hello")
+    f.write("world")
+
+    f.close()
+
+}

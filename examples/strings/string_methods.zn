@@ -1,0 +1,8 @@
+void main(){
+    string s = "Hello Zinc"
+    println(s.length())
+    println(s.upper())
+    println(s.lower())
+    println(s.contains("Zinc"))
+    println(s.contains("zinc"))
+}

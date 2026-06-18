@@ -1,0 +1,7 @@
+void main(){
+
+    defer println("done")
+
+    println("running")
+
+}

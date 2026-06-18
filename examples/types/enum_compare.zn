@@ -1,0 +1,14 @@
+enum Direction{
+    LEFT,
+    RIGHT
+}
+
+void main(){
+
+    Direction dir = Direction.LEFT
+
+    if(dir == Direction.LEFT){
+        println("ok")
+    }
+
+}

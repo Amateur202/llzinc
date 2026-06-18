@@ -1,0 +1,13 @@
+void test(){
+
+    defer println("cleanup")
+
+    return
+
+}
+
+void main(){
+
+    test()
+
+}

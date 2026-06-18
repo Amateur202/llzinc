@@ -1,0 +1,21 @@
+extern {
+    float _zn_time_now()
+    float _zn_time_ms()
+    void _zn_time_sleep(float secs)
+    int _zn_time_year(int t)
+    int _zn_time_month(int t)
+    int _zn_time_day(int t)
+    int _zn_time_hour(int t)
+    int _zn_time_min(int t)
+    int _zn_time_sec(int t)
+}
+
+float now() { return _zn_time_now() }
+float ms() { return _zn_time_ms() }
+void sleep(float secs) { _zn_time_sleep(secs) }
+int year(int t) { return _zn_time_year(t) }
+int month(int t) { return _zn_time_month(t) }
+int day(int t) { return _zn_time_day(t) }
+int hour(int t) { return _zn_time_hour(t) }
+int min(int t) { return _zn_time_min(t) }
+int sec(int t) { return _zn_time_sec(t) }

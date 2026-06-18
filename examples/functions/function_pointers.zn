@@ -1,0 +1,23 @@
+int add(int a, int b) {
+    return a + b
+}
+
+void execute(void callback(string), string message) {
+    callback(message)
+}
+
+void print_message(string msg) {
+    println("Callback received: " + msg)
+}
+
+void main() {
+    int op(int, int)
+    op = add
+    int result = op(20, 22)
+    
+    if (result == 42) {
+        println("Success: Local function pointer math works")
+    }
+
+    execute(print_message, "Hello from Zinc pointer")
+}

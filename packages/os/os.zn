@@ -1,0 +1,37 @@
+extern {
+    int _zn_os_cmd(string cmd)
+    string _zn_os_cmd_output(string cmd)
+    string _zn_os_list(string path)
+    int _zn_os_mkdir(string path)
+    int _zn_os_rmdir(string path)
+    int _zn_os_remove(string path)
+    int _zn_os_rename(string from, string to)
+    bool _zn_os_exists(string path)
+    bool _zn_os_is_dir(string path)
+    bool _zn_os_is_file(string path)
+    string _zn_os_cwd()
+    int _zn_os_chdir(string path)
+    string _zn_os_getenv(string name)
+    int _zn_os_setenv(string name, string val)
+    int _zn_os_pid()
+    string _zn_os_hostname()
+    void _zn_os_exit(int code)
+}
+
+int cmd(string c) { return _zn_os_cmd(c) }
+string cmd_output(string c) { return _zn_os_cmd_output(c) }
+string list(string path) { return _zn_os_list(path) }
+int mkdir(string path) { return _zn_os_mkdir(path) }
+int rmdir(string path) { return _zn_os_rmdir(path) }
+int remove(string path) { return _zn_os_remove(path) }
+int rename(string from, string to) { return _zn_os_rename(from, to) }
+bool exists(string path) { return _zn_os_exists(path) }
+bool is_dir(string path) { return _zn_os_is_dir(path) }
+bool is_file(string path) { return _zn_os_is_file(path) }
+string cwd() { return _zn_os_cwd() }
+int chdir(string path) { return _zn_os_chdir(path) }
+string getenv(string name) { return _zn_os_getenv(name) }
+int setenv(string name, string val) { return _zn_os_setenv(name, val) }
+int pid() { return _zn_os_pid() }
+string hostname() { return _zn_os_hostname() }
+void exit(int code) { _zn_os_exit(code) }
