@@ -1,4 +1,4 @@
-DEPS_URL := https://github.com/Amateur202/llzinc/releases/download/v1.0.0/deps.tar.gz
+DEPS_URL := https://github.com/Amateur202/llzinc/releases/download/v1/deps.tar.gz
 RUN  ?= .
 BUILD?= .
 
